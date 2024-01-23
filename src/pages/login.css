@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(90deg, #fff 0.21%, #f5e8c9 99.73%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  .login-page .log {
+    width: 10%;
+  }
+  .login-page .title {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  .login-page .inputs {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: min(400px, 100%);
+    margin-bottom: 30px;
+    margin-left: calc(100% / 2 - 200px);
+  }
+  .login-page .inputs div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .login-page .inputs label {
+    height: 21px;
+    display: flex;
+    align-items: center;
+  }
+  .login-page .inputs input {
+    border-radius: 3px;
+    background: transparent;
+    border: 2px black solid;
+  }
+  .login-page .valid {
+    margin-bottom: 20px;
+    border-radius: 100px;
+    border: 2px solid #006004;
+    background: linear-gradient(270deg, #f5e8c9 0%, #fef8e9 95%);
+    width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+  
+  }
+  .login-page .valid:hover {
+    background: linear-gradient(270deg, #fef8e9 0%, #908b7e 95%);
+  }
+  .login-page .login a {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+  }
+  .login-page .remember-f{
+    display: flex;
+    margin-left: calc(100% / 2 - 200px);
+    width: 400px;
+    margin-bottom: 20px;
+  }
+  .login-page .remember-f p {
+    width: 200px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  .login-page .remember-f .f {
+    text-align: end;
+  }
+  .login-page .eroor {
+    color: red;
+    text-decoration: none;
+    transform: scale(0.7);
+  }
+  

@@ -1,0 +1,24 @@
+.suggest {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.suggest ul {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px black solid;
+}
+.suggest ul li {
+  text-align: center;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  list-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.suggest ul li:hover {
+  background: #f5e8c9;
+}

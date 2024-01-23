@@ -1,0 +1,75 @@
+.signUp {
+  width: 100%;
+  background: linear-gradient(90deg, #fff 0.21%, #f5e8c9 99.73%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.signUp .log {
+  width: 10%;
+  align-self: center;
+}
+.signUp .title {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.signUp .inputs {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: min(400px, 100%);
+  margin-bottom: 30px;
+  margin-left: calc(100% / 2 - 200px);
+}
+.signUp .inputs div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.signUp .inputs label {
+  height: 21px;
+  display: flex;
+  align-items: center;
+}
+.signUp .inputs input {
+  border-radius: 3px;
+  background: transparent;
+  border: 2px black solid;
+}
+.signUp .warning {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.signUp .confirm {
+  margin-bottom: 30px;
+}
+.signUp .valid {
+  margin-bottom: 30px;
+  border-radius: 100px;
+  width: 150px;
+  height: 30px;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-self: center;
+}
+.signUp .enabled {
+  border: 2px solid #006004;
+  background: linear-gradient(270deg, #f5e8c9 0%, #fef8e9 95%);
+  transition: all 0.5s linear;
+}
+.signUp .valid:hover {
+  background: linear-gradient(270deg, #fef8e9 0%, #908b7e 95%);
+}
+.signUp .login a {
+  text-decoration: none;
+  color: blue;
+  cursor: pointer;
+}
+.signUp .eroor {
+  color: red;
+  text-decoration: none;
+  transform: scale(0.7);
+}

@@ -1,0 +1,123 @@
+.header {
+  --width-logo: 100px;
+  --height-logo: 100px;
+  --width-name: 100px;
+  --height-name: 100px;
+  --width-input: 150px;
+  --height-input: 35px;
+  --size-connect: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    --width-logo: 140px;
+    --height-logo: 140px;
+    --width-name: 200px;
+    --height-name: 200px;
+    --width-input: 220px;
+    --height-input: 60px;
+    --size-connect: 32px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    --width-logo: calc(140px * 0.9);
+    --height-logo: calc(140px * 0.9);
+    --width-name: calc(200px * 0.9);
+    --height-name: calc(200px * 0.9);
+    --width-input: calc(220px * 0.9);
+    --height-input: calc(60px * 0.9);
+    --size-connect: 32px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    --width-logo: calc(140px * 0.7);
+    --height-logo: calc(140px * 0.7);
+    --width-name: calc(200px * 0.7);
+    --height-name: calc(200px * 0.7);
+    --width-input: calc(220px * 0.7);
+    --height-input: calc(60px * 0.7);
+    --size-connect: 17px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    --width-logo: 60px;
+    --height-logo: 60px;
+    --width-name: 100px;
+    --height-name: 100px;
+    --width-input: 220px;
+    --height-input: 60px;
+    --width-input: 110px;
+    --height-input: 30px;
+    --header-justify-content: center;
+    --size-connect: 17px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    --width-logo: 70px;
+    --height-logo: 70px;
+    --width-name: 100px;
+    --height-name: 100px;
+    --width-input: 220px;
+    --height-input: 60px;
+    --width-input: 110px;
+    --height-input: 30px;
+    --header-justify-content: center;
+    --size-connect: 17px;
+  }
+}
+
+@font-face {
+  font-family: "Akaya Telivigala";
+  src: url("../fonts/AkayaTelivigala-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5e8c9;
+  border-bottom: #000000 solid 2px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+.header .logo {
+  width: var(--width-logo);
+  height: var(--height-logo);
+}
+
+.header .name {
+  width: var(--width-name);
+  height: var(--height-name);
+}
+
+.header .connect {
+  width: var(--width-input);
+  height: var(--height-input);
+  border-radius: 1000px;
+  font-family: Akaya Telivigala;
+  font-size: var(--size-connect);
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: center;
+  color: black;
+  background-color: #f5e8c9;
+  margin-right: 20px;
+}
+.header .connect:hover {
+  cursor: pointer;
+  box-shadow: inset -2px 0px 1px black;
+  transform: scale(1.1);
+  transition: all linear 0.2s;
+}

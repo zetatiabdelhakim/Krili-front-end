@@ -1,0 +1,25 @@
+.on-cercle-red-click {
+  position: absolute;
+  width: 250px;
+  background: #e1d1ad;
+  z-index: 1000;
+  padding: 10px;
+  border: 2px solid black;
+  padding-bottom: 0px;
+  z-index: 100;
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+}
+.on-cercle-red-click .overlap {
+  padding: 3px;
+  background: #f5e8c9;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.on-cercle-red-click p {
+  cursor: pointer;
+  transform: scale(1.5);
+  color: rgb(255, 255, 255);
+}

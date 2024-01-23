@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Akaya Telivigala";
+  src: url("../fonts/AkayaTelivigala-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Recursive";
+  src: url("../fonts/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akaya Telivigala";
+  src: url("../fonts/AkayaTelivigala-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("../fonts/AdventPro-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.welcomeUser {
+    padding-top: 10px;
+    margin-bottom: 50px;
+  margin-top: 153px;
+  display: flex;
+  flex-direction: column;
+  height: 155px;
+  flex-shrink: 0;
+  background: #f5e8c9;
+}
+.welcomeUser .bonjourUser {
+  color: #000;
+  text-align: center;
+  font-family: Advent Pro;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 35px;
+}
+.welcomeUser .msgAccueil {
+  margin-left: 300px;
+  margin-right: 300px;
+  color: #000;
+  text-align: center;
+  font-family: Akaya Telivigala;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.annonce {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  font-family: Recursive;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.universite,
+.type,
+.genre,
+.prix {
+  margin: 10px;
+}
+
+.titre {
+  color: #000;
+  font-family: Times New Roman;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.input {
+  width: 200px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: #fff;
+}
+.filtre2 {
+  display: flex;
+}
+.select {
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: #fff;
+  width: 200px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.prixInput {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  border: 1px solid #000;
+  background: #fff;
+}
+.label1 {
+  margin-right: 50px;
+  padding-bottom: 5px;
+  color: #000;
+  font-family: Times New Roman;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

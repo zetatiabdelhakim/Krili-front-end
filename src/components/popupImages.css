@@ -1,0 +1,125 @@
+.popup-images {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all ease-in-out 0.2s;
+  transform-origin: 100% 100% 0;
+}
+.popup-images .main {
+  position: absolute;
+  height: 100%;
+  z-index: 101;
+  background-color: white;
+  width: min(100%, 400px);
+  overflow: hidden;
+}
+.popup-images .X {
+  position: absolute;
+  z-index: 102;
+  top: 20px;
+  right: 17px;
+  color: #b95d22;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.popup-images .popup-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0px 0px 10px 100px;
+  background: #f5e8c9;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-images .info {
+  text-align: center;
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 0;
+  height: 30px;
+  max-width: 300px;
+}
+.popup-images .info .title {
+  color: #d8250e;
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+.popup-images .info .title i {
+  margin-right: 5px;
+}
+
+.popup-images .popup-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px 100px 0px 0px;
+  background: #f5e8c9;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.popup-images i.like {
+  color: red;
+  opacity: 0.5;
+}
+.popup-images .im-in {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 10px;
+  right: 10px;
+  position: relative;
+  transform: translateY(50%);
+}
+.popup-images .im-in .other-people i {
+  color: #d8250e;
+}
+.popup-images .im-in > i {
+  color: green;
+  opacity: 0.5;
+}
+.popup-images .im-in .number {
+  position: absolute;
+  top: -17px;
+  left: 54px;
+  color: white;
+}
+.popup-images :is(.im-in i, .like):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform linear 0.1s;
+}
+.popup-images .images img {
+  width: 100%;
+  overflow: scroll;
+  flex-shrink: 0;
+}
+.popup-images .images {
+  overflow: auto;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.popup-images .images::-webkit-scrollbar {
+  width: 0px;
+}
+#h {
+  position: relative;
+  top: 0px;
+}

@@ -1,0 +1,87 @@
+.filter .annonce {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  font-family: Recursive;
+  font-size: 30px;
+}
+.filter .universite,
+.filter .type,
+.filter .genre,
+.filter .prix {
+  margin: 10px;
+}
+
+.filter .titre {
+  color: #000;
+  font-family: Times New Roman;
+  font-size: 20px;
+}
+.filter .input {
+  padding-left: 10px;
+  width: 300px;
+  height: 25px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #fff;
+}
+.filter .filtre2 {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter .select {
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  width: 170px;
+  height: 25px;
+  flex-shrink: 0;
+}
+.filter .prixInput {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  border: 1px solid #000;
+  background: #fff;
+}
+.filter .label1 {
+  margin-right: 50px;
+  padding-bottom: 5px;
+  color: #000;
+  font-family: Times New Roman;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.filter .prix .titre {
+  margin-right: 100px;
+}
+.filter .prix {
+  margin-bottom: 30px;
+}
+.filter hr{
+    width: 50%;
+    height: 2px;
+    background: #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.filter .offres{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+.filter .notFound{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

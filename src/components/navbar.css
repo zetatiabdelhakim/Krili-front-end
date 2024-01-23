@@ -1,0 +1,187 @@
+.navbar {
+  --navbar-height: 150px;
+  --logo-width: 120px;
+  --logo-height: 160px;
+  --nav1-size: 30px;
+  --margin-nav1: 30px;
+  --fontsize-nav: 18px;
+  --util-width: 40px;
+  --margin-top-navig: 66px;
+  --navigation-height: 60px;
+}
+@media screen and (max-width: 1200px) {
+  .navbar {
+    --navbar-height: 150px;
+    --logo-width: 120px;
+    --logo-height: 160px;
+    --nav1-size: 30px;
+    --margin-nav1: 30px;
+    --fontsize-nav: 18px;
+    --util-width: 40px;
+    --margin-top-navig: 66px;
+    --navigation-height: 60px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    --navbar-height: 150px;
+    --logo-width: 120px;
+    --logo-height: 160px;
+    --nav1-size: 30px;
+    --margin-nav1: 30px;
+    --fontsize-nav: 18px;
+    --util-width: 40px;
+    --margin-top-navig: 50px;
+    --navigation-height: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    --navbar-height: calc(150px * 0.7);
+    --logo-width: calc(120px * 0.7);
+    --logo-height: 110px;
+    --nav1-size: 20px;
+    --margin-nav1: 20px;
+    --fontsize-nav: 11px;
+    --util-width: 40px;
+    --margin-top-navig: 50px;
+    --navigation-height: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    --navbar-height: calc(150px * 0.7);
+    --logo-width: calc(120px * 0.5);
+    --logo-height: 80px;
+    --nav1-size: 20px;
+    --margin-nav1: 10px;
+    --fontsize-nav: 11px;
+    --util-width: 30px;
+    --margin-top-navig: 50px;
+    --navigation-height: 60px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    --navbar-height: calc(150px * 0.7);
+    --logo-width: calc(120px * 0.4);
+    --logo-height: 40px;
+    --nav1-size: 15px;
+    --margin-nav1: 13px;
+    --fontsize-nav: 11px;
+    --util-width: 30px;
+    --margin-top-navig: 50px;
+    --navigation-height: 30px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .navbar {
+    --navbar-height: calc(150px * 0.6);
+    --logo-width: calc(120px * 0.3);
+    --logo-height: 40px;
+    --nav1-size: 17px;
+    --margin-nav1: 12px;
+    --fontsize-nav: 11px;
+    --util-width: 22px;
+    --margin-top-navig: 0px;
+  }
+}
+.navbar {
+  height: var(--navbar-height);
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: #f5e8c9;
+  border-bottom: #000000 solid 2px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+.navbar .nav {
+  margin-top: 0px;
+}
+.navbar .nav .logos {
+  top: 0px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+.navbar .profile {
+  height: 60px;
+  background-color: #f5e8c9;
+}
+
+.navbar .profile .util {
+  float: right;
+  margin: 20px;
+  width: var(--util-width);
+  height: var(--util-width);
+  border: 1px solid black;
+  border-radius: 1000px;
+  background-color: #7cf9f2;
+  color: #000000;
+  flex-shrink: 0;
+}
+.navbar .nav .logos .name {
+  width: var(--logo-width);
+  height: var(--logo-height);
+}
+.navbar .nav .logos .logo {
+  width: var(--logo-width);
+  height: var(--logo-height);
+}
+.navbar .profile .navigation {
+  margin-top: var(--margin-top-navig);
+  height: var(--navigation-height);
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .profile .navigation i {
+  margin-left: var(--margin-nav1);
+  margin-right: var(--margin-nav1);
+  margin-bottom: 0px;
+  font-size: var(--nav1-size);
+}
+.navbar .profile .navigation .favori,
+.acceuil,
+.offre,
+.quit {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.navbar .profile .navigation .favori,
+.acceuil,
+.offre,
+.quit i {
+  margin-bottom: 0px;
+}
+.navbar .profile .navigation .favori,
+.acceuil,
+.offre,
+.quit span {
+  margin-top: 0px;
+  font-size: var(--fontsize-nav);
+}
+.navbar .profile div:hover {
+  filter: invert(1);
+  cursor: pointer;
+}
+.navbar img:hover {
+  filter: brightness(2);
+  transform: scale(1.07);
+  transition: all 0.1s linear;
+  cursor: pointer;
+}

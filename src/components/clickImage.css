@@ -1,0 +1,32 @@
+.click-image {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out 0.2s;
+  transform-origin: 100% 100% 0;
+}
+.click-image .image {
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.click-image .X {
+  position: absolute;
+  z-index: 102;
+  top: 20px;
+  right: 17px;
+  color: #ffffff;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.click-image .image img {
+  width: min(100%, 1000px);
+}

@@ -1,0 +1,123 @@
+.offreClient {
+  position: relative;
+  width: 460px;
+  border: 1px solid #000;
+  background: #f5e8c9;
+  padding: 10px;
+  padding-bottom: 50px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px;
+}
+.offreClient .top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.offreClient .top .images {
+  overflow: hidden;
+  width: 67%;
+  background: #b4b2af;
+  flex-shrink: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.offreClient .top .images .main-image {
+  width: 77%;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 5px;
+}
+.offreClient .top .images .main-image img {
+  width: 100%;
+}
+.offreClient .sub-images img {
+  width: 100%;
+}
+.offreClient .sub-images .other-images {
+  position: relative;
+}
+.offreClient .sub-images .other-images p {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+.offreClient .sub-images .other-images img {
+  opacity: 0.4;
+}
+.offreClient .top img:hover {
+  transform: scale(1.05);
+  transition: transform linear 0.1s;
+}
+.offreClient img {
+  cursor: pointer;
+}
+.offreClient .info-place {
+  width: 100%;
+  margin-top: 30px;
+}
+.offreClient .top .info-place .univ {
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+.offreClient .info {
+  text-align: start;
+  width: 100%;
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 0;
+  height: 30px;
+}
+.offreClient .Localisation {
+  height: 40px;
+}
+.offreClient .info .title {
+  color: #d8250e;
+  width: fit-content;
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+.offreClient .info .title i {
+  margin-right: 5px;
+}
+.offreClient .description {
+  display: flex;
+  flex-direction: column;
+}
+.offreClient i.like {
+  position: absolute;
+  color: red;
+  opacity: 0.5;
+  top: 25px;
+  right: 10px;
+}
+.offreClient .im-in {
+  position: absolute;
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 10px;
+  right: 10px;
+}
+.offreClient .im-in .other-people i {
+  color: #d8250e;
+}
+.offreClient .im-in > i {
+  color: green;
+  opacity: 0.5;
+}
+.offreClient .im-in .number {
+  position: absolute;
+  top: -17px;
+  left: 54px;
+  color: white;
+}
+.offreClient :is(.im-in i, .like):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform linear 0.1s;
+}
