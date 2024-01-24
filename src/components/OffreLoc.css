@@ -1,0 +1,128 @@
+.offreLoc {
+  position: relative;
+  width: 460px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background: #f5e8c9;
+  padding: 10px;
+  padding-bottom: 50px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px;
+}
+.offreLoc .top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.offreLoc img {
+  border-radius: 5px;
+}
+.offreLoc .top .images {
+  overflow: hidden;
+  width: 67%;
+  /* background: #b4b2af; */
+  flex-shrink: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.offreLoc .top .images .main-image {
+  width: 77%;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 5px;
+}
+.offreLoc .top .images .main-image img {
+  width: 100%;
+}
+.offreLoc .sub-images img {
+  width: 100%;
+}
+.offreLoc .sub-images .other-images {
+  position: relative;
+}
+.offreLoc .sub-images .other-images p {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+.offreLoc .sub-images .other-images img {
+  opacity: 0.4;
+}
+.offreLoc img:hover {
+  transform: scale(1.05);
+  transition: transform linear 0.1s;
+}
+.offreLoc img {
+  cursor: pointer;
+}
+.offreLoc .info-place {
+  width: 100%;
+  margin-top: 30px;
+}
+.offreLoc .top .info-place .univ {
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+.offreLoc .info {
+  text-align: start;
+  width: 100%;
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 0;
+  height: 30px;
+}
+.offreLoc .Localisation {
+  height: 40px;
+}
+.offreLoc .info .title {
+  color: #d8250e;
+  width: fit-content;
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+.offreLoc .info .title i {
+  margin-right: 5px;
+}
+.offreLoc .description {
+  display: flex;
+  flex-direction: column;
+}
+.offreLoc i.like {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+.offreLoc i.fa-hand {
+  right: 70px;
+}
+.offreLoc .im-in {
+  position: absolute;
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 10px;
+  right: 10px;
+}
+.offreLoc .im-in .other-people i {
+  color: #d8250e;
+}
+.offreLoc .im-in > i {
+  color: green;
+  opacity: 0.5;
+}
+.offreLoc .im-in .number {
+  position: absolute;
+  top: -17px;
+  left: 54px;
+  color: white;
+}
+.offreLoc :is(.im-in i, .like):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform linear 0.1s;
+}

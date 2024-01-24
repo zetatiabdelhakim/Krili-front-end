@@ -11,7 +11,7 @@ import {
   updateUserInLocalStorage,
   readUserFromLocalStorage,
 } from "../functions/user";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function AddOffre() {
   let navigate = useNavigate();
@@ -22,6 +22,7 @@ function AddOffre() {
   const [universites, setUnivs] = useState([]);
   const [element, setElm] = useState(null);
   const [offre, setOffre] = useState({ name: "", images: [] });
+  const [user, setUser] = useState(readUserFromLocalStorage());
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -88,7 +89,7 @@ function AddOffre() {
     document.getElementById(id).click();
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (mainImage == "") {
       setError("Vous devez selectionner l’image principale.");
@@ -100,7 +101,7 @@ function AddOffre() {
       return;
     }
     const formData = new FormData();
-    formData.append("userId", 202);
+    formData.append("userId", user.id);
     formData.append("universite", univ);
     formData.append("prix", offre.prix);
     formData.append("logement", offre.logement);
@@ -112,7 +113,7 @@ function AddOffre() {
     for (let i = 0; i < newArray.length; i++) {
       formData.append("images", newArray[i]);
     }
-    axios
+    await axios
       .post("http://localhost:8080/addOffre", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
@@ -121,8 +122,10 @@ function AddOffre() {
       .then((response) => {
         console.log(response.data);
         setOffre({ name: "", images: [] });
-        otherImages(["", "", "", "", "", ""]);
+        setOtherImages(["", "", "", "", "", ""]);
         setMainImage("");
+        updateUserInLocalStorage(response.data);
+        navigate("/offres");
       })
       .catch((error) => {
         console.log(error);
@@ -132,10 +135,12 @@ function AddOffre() {
   return (
     <div className="AddOffre">
       <div className="ajouterOffre">
-        <a href="offres.html" className="retour">
-          {" "}
-          <i className="fa-solid fa-arrow-left"></i>
-        </a>
+        <Link to="/offres">
+          <a className="retour">
+            {" "}
+            <i className="fa-solid fa-arrow-left"></i>
+          </a>
+        </Link>
         <span>Ajouter Offre</span>
       </div>
       {error && (

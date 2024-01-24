@@ -54,7 +54,7 @@ function Navbar({ where }) {
               <span>Favoris</span>
             </div>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/offres" style={{ textDecoration: "none" }}>
             <div
               className="offre"
               style={{ color: where == 3 ? "#9EA8C8" : "black" }}

@@ -1,0 +1,88 @@
+.OffrirHolder .offreHeader {
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 155px;
+}
+.OffrirHolder .offreHeader .offreTitre {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: Recursive;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+.OffrirHolder .offreHeader .offreButtons {
+  display: flex;
+  justify-content: space-between;
+}
+.OffrirHolder .offreHeader .offreButtons .ajouterOffre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.OffrirHolder .offreHeader .offreButtons .ajouterOffre i {
+  font-size: 50px;
+  margin-left: 40px;
+  flex-shrink: 0;
+  color: #238eb3;
+}
+.OffrirHolder .offreHeader .offreButtons .ajouterOffre i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: rgb(41, 41, 63);
+  transition: all 0.2s;
+}
+.OffrirHolder .offreHeader .offreButtons .ajouterOffre span {
+  color: #238eb3;
+  font-family: Times New Roman;
+  margin-left: 40px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.OffrirHolder .offreHeader .offreButtons .notificationOffre i {
+  font-size: 50px;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+.OffrirHolder .offres {
+  position: relative;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.OffrirHolder .nothing {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  font-family: Recursive;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.OffrirHolder .nothing i {
+  color: rgb(131, 131, 201);
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+.OffrirHolder .nothing i:hover{
+    cursor: pointer;
+  transform: scale(1.1);
+  color: rgb(41, 41, 63);
+  transition: all 0.2s;
+}
+.OffrirHolder .nothing p {
+  width: 50%;
+}

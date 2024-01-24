@@ -1,7 +1,7 @@
 import React from "react";
 import "./popupHolder.css";
 
-function PopupHolder({ Component, set, s, user, setUser }) {
+function PopupHolder({ Component, set, s, user, setUser, offre = null }) {
   function handleOnXClick() {
     set.set({ transform: "scaleY(0)" });
   }
@@ -10,7 +10,11 @@ function PopupHolder({ Component, set, s, user, setUser }) {
       <div className="X" onClick={handleOnXClick}>
         <i className="fa-solid fa-xmark fa-2xl"></i>
       </div>
-      <Component user={user} setUser={setUser} setStyle={set}/>
+      {offre ? (
+        <Component user={user} setUser={setUser} setStyle={set} offre={offre} />
+      ) : (
+        <Component user={user} setUser={setUser} setStyle={set} />
+      )}
     </div>
   );
 }

@@ -9,14 +9,12 @@ import {
 } from "../functions/user";
 
 function AttentionHand({ user, setUser, setStyle }) {
-  useEffect(() => {
-    updateUserInLocalStorage(user);
-  }, [user]);
   async function onValidClick() {
     let responce = await axios.put(
       `http://localhost:8080/removeAllHands/${user.id}`
     );
     setUser(responce.data);
+    updateUserInLocalStorage(responce.data);
     setStyle.set({ transform: "scaleY(0)" });
   }
   return (

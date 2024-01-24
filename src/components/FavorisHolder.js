@@ -13,7 +13,7 @@ import AttentionHand from "./AttentionHand";
 function FavorisHolder() {
   const [user, setUser] = useState(readUserFromLocalStorage());
   let [popStyle, setPopStyle] = useState({ transform: "scaleY(0)" });
-  function handleOnRemoveHnadsClick(e) {
+  function handleOnRemoveHnadsClick() {
     setPopStyle({ transform: "scaleY(1)" });
   }
 
@@ -43,7 +43,9 @@ function FavorisHolder() {
         {user &&
           user.hands.map((elm) => <OffreClient theOffre={elm} key={elm.id} />)}
         {user &&
-          user.likes.map((elm) => <OffreClient theOffre={elm} key={elm.id} />)}
+          user.likes
+            .filter((elm) => !user.hands.map((a) => a.id).includes(elm.id))
+            .map((elm) => <OffreClient theOffre={elm} key={elm.id} />)}
       </div>
       {user && (user.hands.length || user.likes.length) ? (
         <font></font>
