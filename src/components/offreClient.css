@@ -17,7 +17,7 @@
 .offreClient .top .images {
   overflow: hidden;
   width: 67%;
-  background: #b4b2af;
+  /* background: #e1d5ba; */
   flex-shrink: 0;
   padding: 5px;
   display: flex;
@@ -74,6 +74,9 @@
 .offreClient .Localisation {
   height: 40px;
 }
+.offreClient img{
+  border-radius: 5px;
+}
 .offreClient .info .title {
   color: #d8250e;
   width: fit-content;
@@ -90,7 +93,6 @@
 .offreClient i.like {
   position: absolute;
   color: red;
-  opacity: 0.5;
   top: 25px;
   right: 10px;
 }
@@ -108,7 +110,6 @@
 }
 .offreClient .im-in > i {
   color: green;
-  opacity: 0.5;
 }
 .offreClient .im-in .number {
   position: absolute;

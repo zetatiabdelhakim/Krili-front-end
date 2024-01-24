@@ -1,0 +1,26 @@
+.popupHolder {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.2s;
+  transform-origin: 100% 100% 0;
+}
+.popupHolder .X {
+  position: absolute;
+  z-index: 102;
+  top: 20px;
+  right: 17px;
+  color: #b95d22;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.popupHolder .X:hover {
+  color: #ffffff;
+}

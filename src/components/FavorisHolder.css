@@ -1,0 +1,64 @@
+.FavorisHolder {
+  position: relative;
+  margin-top: 180px;
+}
+.FavorisHolder .offreHeader .FavoriButton .BaisserMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  margin-right: 30px;
+}
+
+.FavorisHolder .offreHeader .FavoriButton .BaisserMain i {
+  font-size: 50px;
+  margin-right: 40px;
+  flex-shrink: 0;
+  /* transform: rotate(100deg); */
+  transition: transform 0.3s ease-in-out;
+}
+.FavorisHolder .offreHeader .FavoriButton .BaisserMain i:hover {
+  transform: rotate(150deg);
+  color: green;
+  cursor: pointer;
+}
+.FavorisHolder .offreHeader .FavoriButton .BaisserMain span {
+  color: #006004;
+  text-align: center;
+  font-family: Times New Roman;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.FavorisHolder .offreTitre {
+  color: #000;
+  font-family: Recursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+.FavorisHolder .offres {
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.FavorisHolder .nothing {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  font-family: Recursive;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.FavorisHolder .nothing i {
+  color: rgb(131, 131, 201);
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+.FavorisHolder .nothing p {
+  width: 50%;
+}

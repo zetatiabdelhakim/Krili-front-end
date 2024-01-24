@@ -9,6 +9,7 @@ function Filter() {
   let [universites, setUnivs] = useState([]);
   let [offres, setOffres] = useState([]);
   let [offresToDisplay, setOffresToDisplay] = useState([]);
+  
   let [infoFilter, setInfoFilter] = useState({
     prix: { min: new Set(), max: new Set() },
     genre: "",
@@ -69,64 +70,11 @@ function Filter() {
     }
   }
 
-  // for test
-  function fetchOffres() {
-    let universites = [
-      "ENSAM casablanca",
-      "Ensa El-jadida",
-      "FST Settat",
-      "ENCG Settat",
-      "CPGE M5",
-      "ENSAM Rabat",
-      "ENSA fes",
-      "ENSA Safi",
-    ];
-    let genres = ["Garcon", "Fille"];
-    let logements = ["Garconnaire", "Appartement"];
-    let offress = [];
-
-    for (let i = 0; i < 35; i++) {
-      let offre = {
-        id: i + 1,
-        universite: universites[Math.floor(Math.random() * universites.length)],
-        prix: String(1000 + Math.floor(Math.random() * 3001)),
-        logement: logements[Math.floor(Math.random() * logements.length)],
-        genre: genres[Math.floor(Math.random() * genres.length)],
-        localisation: "hhhh hhhhhhhhh hhhhh hhhhh hhhhhhhhhh",
-        contact: "0600000000",
-        verified: true,
-        images: [
-          {
-            id: 102,
-            data: image,
-          },
-          {
-            id: 102,
-            data: image,
-          },
-          {
-            id: 102,
-            data: image,
-          },
-          {
-            id: 102,
-            data: image,
-          },
-          {
-            id: 102,
-            data: image,
-          },
-          {
-            id: 102,
-            data: image,
-          },
-        ],
-      };
-      offress.push(offre);
-    }
-    setOffres(offress);
-    setOffresToDisplay(offress);
-  }
+  const fetchOffres = async () => {
+    const { data } = await axios.get("http://localhost:8080/offres");
+    setOffres(data);
+    setOffresToDisplay(data);
+  };
 
   // end
   return (

@@ -66,20 +66,21 @@
 .filter .prix {
   margin-bottom: 30px;
 }
-.filter hr{
-    width: 50%;
-    height: 2px;
-    background: #000;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.filter hr {
+  width: 50%;
+  height: 2px;
+  background: #000;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.filter .offres{
+.filter .offres {
+  padding-left: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 }
-.filter .notFound{
+.filter .notFound {
   height: 200px;
   display: flex;
   align-items: center;

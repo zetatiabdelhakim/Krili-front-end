@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../images/logo.svg";
 import name from "../images/name.svg";
 import "./navbar.css";
-import { useNavigate, Link} from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
   deleteUserFromLocalStorage,
   addUserToLocalStorage,
@@ -31,10 +31,12 @@ function Navbar({ where }) {
       </div>
       <div className="profile">
         <div>
-          <button className="util">{user.name.charAt(0).toUpperCase()}</button>
+          <button className="util">
+            {user && user.name.charAt(0).toUpperCase()}
+          </button>
         </div>
         <div className="navigation">
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <div
               className="acceuil"
               style={{ color: where == 1 ? "#9EA8C8" : "black" }}
@@ -43,7 +45,7 @@ function Navbar({ where }) {
               <span>Acceuil</span>
             </div>
           </Link>
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/favoris" style={{ textDecoration: "none" }}>
             <div
               className="favori"
               style={{ color: where == 2 ? "#9EA8C8" : "black" }}
@@ -52,7 +54,7 @@ function Navbar({ where }) {
               <span>Favoris</span>
             </div>
           </Link>
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <div
               className="offre"
               style={{ color: where == 3 ? "#9EA8C8" : "black" }}

@@ -12,7 +12,7 @@ function WelcomeUser() {
   return (
     <div class="welcomeUser">
       <div class="bonjourUser">
-        {new Date().getHours() < 18 ? "Bonjour" : "Bonsoir"} {user.name}
+        {new Date().getHours() < 18 ? "Bonjour" : "Bonsoir"} {user&&user.name}
       </div>
       <div class="msgAccueil">
         Nous sommes ravis de vous revoir sur notre plateforme dédiée à

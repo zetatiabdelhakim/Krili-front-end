@@ -94,9 +94,14 @@ function AddOffre() {
       setError("Vous devez selectionner l’image principale.");
       return;
     }
+    let univ = document.getElementById("univ").value;
+    if (!universites.includes(univ)) {
+      setError("Vous devez choisir une universite parmi celles proposees.");
+      return;
+    }
     const formData = new FormData();
-    formData.append("userId", 1);
-    formData.append("universite", offre.universite);
+    formData.append("userId", 202);
+    formData.append("universite", univ);
     formData.append("prix", offre.prix);
     formData.append("logement", offre.logement);
     formData.append("genre", offre.genre);
@@ -175,9 +180,10 @@ function AddOffre() {
               name="genre"
               id=""
               className="select"
-              requiredonChange={handleInputChange}
+              required
+              onChange={handleInputChange}
             >
-              <option value="" defaultValue={""}></option>
+              <option value=""></option>
               <option value="Neutre"> Neutre</option>
               <option value="Garcon">Garcon</option>
               <option value="Fille">Fille</option>
