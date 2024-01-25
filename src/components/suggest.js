@@ -29,6 +29,7 @@ function Suggest({ element, data, optionsNumber }) {
   }
   function handelOnclickLi(e) {
     element.value = e.target.innerHTML;
+    element.focus();
   }
   function getList(startWith) {
     let list = [];

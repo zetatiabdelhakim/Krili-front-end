@@ -12,12 +12,14 @@ import {
 import { useNavigate } from "react-router-dom";
 import PopupHolder from "./popupHolder";
 import AttentionDelete from "./AttentionDelete";
+import EditOffre from "./EditOffre";
 
 function OffreLoc({ theOffre, user, setUser }) {
   let [offre, setOffre] = useState(theOffre);
   let [popStyle, setPopStyle] = useState({ transform: "scaleY(0)" });
   let [likeHand, setLikeHand] = useState({ like: 0, hand: 0 });
   let [popDelete, setPopDelete] = useState({ transform: "scaleY(0)" });
+  let [popEdit, setPopEdit] = useState({ transform: "scaleY(0)" });
   let [imageStyle, setImagestyle] = useState({
     src: "",
     transform: "scaleY(0)",
@@ -31,6 +33,9 @@ function OffreLoc({ theOffre, user, setUser }) {
   }
   function handleOnDelete() {
     setPopDelete({ transform: "scaleY(1)" });
+  }
+  function handleOnEdit() {
+    setPopEdit({ transform: "scaleY(1)" });
   }
   function handelOnImageClick(e) {
     setImagestyle({ src: e.target.src, transform: "scaleY(1)" });
@@ -51,6 +56,14 @@ function OffreLoc({ theOffre, user, setUser }) {
         setUser={setUser}
         s={popDelete}
         set={{ set: setPopDelete }}
+        offre={offre}
+      />
+      <PopupHolder
+        Component={EditOffre}
+        user={user}
+        setUser={setUser}
+        s={popEdit}
+        set={{ set: setPopEdit }}
         offre={offre}
       />
       <PopupImages offre={offre} s={popStyle} set={{ set: setPopStyle }} />
@@ -128,7 +141,10 @@ function OffreLoc({ theOffre, user, setUser }) {
       <i className="fa-solid fa-heart fa-xl like">{likeHand.like}</i>
       <i className="fa-solid fa-hand fa-xl like">{likeHand.hand}</i>
       <div className="im-in">
-        <i className="fa-solid fa-pen-to-square fa-xl"></i>
+        <i
+          className="fa-solid fa-pen-to-square fa-xl"
+          onClick={handleOnEdit}
+        ></i>
         <div className="other-people">
           <i className="fa-solid fa-trash fa-xl" onClick={handleOnDelete}></i>
         </div>

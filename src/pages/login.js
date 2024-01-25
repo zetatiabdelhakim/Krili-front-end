@@ -18,7 +18,7 @@ function Login() {
     if (readUserFromLocalStorage()) {
       let user = readUserFromLocalStorage();
       if (user.isAdmin) {
-        // navigate("/admin");
+        // navigate("/addOffre");
       } else {
         navigate("/home");
       }
@@ -53,7 +53,7 @@ function Login() {
       <div className="login-page">
         <Link to="/">
           <img src={logo} alt="" className="log" />
-        </Link> 
+        </Link>
         <h1 className="title">Connexion</h1>
         {error && (
           <div className="eroor">

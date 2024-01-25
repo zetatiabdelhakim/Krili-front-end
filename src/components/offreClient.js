@@ -42,11 +42,11 @@ function OffreClient({ theOffre }) {
   }, [user]);
   function isLikeHand() {
     if (user) {
-      let likes = user.likes.map((elm) => elm.id);
-      let hands = user.hands.map((elm) => elm.id);
+      let likes = user.likes && user.likes.map((elm) => elm.id);
+      let hands = user.hands && user.hands.map((elm) => elm.id);
       setLikeHand({
-        like: likes.includes(offre.id),
-        hand: hands.includes(offre.id),
+        like: likes&&likes.includes(offre.id),
+        hand: hands&&hands.includes(offre.id),
       });
     }
   }
