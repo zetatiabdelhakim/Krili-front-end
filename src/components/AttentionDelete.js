@@ -19,7 +19,7 @@ function AttentionDelete({ user, setUser, setStyle, offre }) {
         updateUserInLocalStorage(response.data);
         setUser(response.data);
       });
-    
+
     setStyle.set({ transform: "scaleY(0)" });
   }
 

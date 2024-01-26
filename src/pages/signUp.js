@@ -18,8 +18,8 @@ function SignUp() {
   useEffect(() => {
     if (readUserFromLocalStorage()) {
       let user = readUserFromLocalStorage();
-      if (user.isAdmin) {
-        // navigate("/admin");
+      if (user.admin) {
+        navigate("/admin");
       } else {
         navigate("/home");
       }
@@ -38,8 +38,8 @@ function SignUp() {
       .then((response) => {
         console.log(response.data);
         addUserToLocalStorage(response.data);
-        if (response.data.isAdmin) {
-          // navigate("/admin");
+        if (response.data.admin) {
+          navigate("/admin");
         } else {
           navigate("/home");
         }

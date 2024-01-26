@@ -100,14 +100,15 @@
 .EditOffre .buttonValider {
   color: #000000;
   font-family: Recursive;
-  font-size: 17px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 130px;
+  width: 150px;
   height: 30px;
   flex-shrink: 0;
   border-radius: 1000px;
+  border: 0px;
   background: #17eb53;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -219,7 +220,7 @@
   display: none;
 }
 .EditOffre .eroor {
-  color: rgb(84, 217, 27);
+  color: rgb(227, 95, 104);
   text-decoration: none;
   transform: scale(0.9);
   margin-bottom: 10px;

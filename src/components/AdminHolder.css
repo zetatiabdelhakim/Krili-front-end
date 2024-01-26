@@ -1,0 +1,53 @@
+.AdminHolder hr {
+  width: 50%;
+  height: 2px;
+  background: #000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.AdminHolder .offres {
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.AdminHolder .notFound {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AdminHolder .actions{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 5px;
+    border-bottom: 2px rgb(63, 63, 108) solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+.AdminHolder .actions i{
+    font-size: 30px;
+}
+.AdminHolder .actions p{
+    font-family: Advent Pro;
+  font-size: 30px;
+}
+.AdminHolder .actions p i{
+    margin-right: 25px;
+}
+.AdminHolder .actions i:hover{
+    color: blue;
+    cursor: pointer;
+    scale: 1.1;
+}
+.AdminHolder .actions input{
+    background: transparent;
+    border: none;
+    width: 500px;
+    height: 30px;
+    font-family: Advent Pro;
+    font-size: 27px;
+}

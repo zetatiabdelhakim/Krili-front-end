@@ -42,12 +42,14 @@ function PopupImages({ offre, s, set}) {
         <div className="popup-footer"></div>
         <div className="images">
           {offre.images.map((elm) => (
+            <div>
             <img
               src={`data:image/jpeg;base64,${elm.data}`}
               alt=""
               key={elm.id}
               onClick={handelOnImageClick}
             />
+            </div>
           ))}
         </div>
       </div>

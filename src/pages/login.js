@@ -17,8 +17,8 @@ function Login() {
   useEffect(() => {
     if (readUserFromLocalStorage()) {
       let user = readUserFromLocalStorage();
-      if (user.isAdmin) {
-        // navigate("/addOffre");
+      if (user.admin) {
+        navigate("/admin");
       } else {
         navigate("/home");
       }
@@ -36,8 +36,8 @@ function Login() {
       .then((response) => {
         console.log(response.data);
         addUserToLocalStorage(response.data);
-        if (response.data.isAdmin) {
-          // navigate("/admin");
+        if (response.data.admin) {
+          navigate("/admin");
         } else {
           navigate("/home");
         }
